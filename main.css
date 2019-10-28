@@ -1,8 +1,15 @@
-/* background colour: #f4f7ff */
+/* common css */
 :root {
   --ambition-community-color: #f4f7ff;
   --ambition-icon-color: #3392fb;
   --ambition-icon-bg-outer: #d7edfe;
+  --ambition-icon-bg: #bfe5fd;
+  --view-all-color: #bbd3e3;
+  --date-color: #d7d8da;
+  --company-review-sub-text: #adbed8;
+  --image-border: #f3f4f6;
+  --button-bg: #2e8cfb;
+  --card-blur: #f6f5fb;
 }
 
 * {
@@ -23,9 +30,7 @@ html {
 .sub-heading {
   font-size: 0.875rem;
 }
-.sub-text {
-  font-size: 0.7rem;
-}
+
 .content {
   padding-left: 5rem;
   padding-right: 5rem;
@@ -43,7 +48,7 @@ body {
   padding: 1rem;
 }
 
-/* my ambition comunity css */
+/* my ambition comunity section css */
 
 .ambition-community {
   margin-top: 1.5rem;
@@ -74,7 +79,7 @@ body {
 }
 
 .ambition-community-content .icon-bg {
-  background-color: #bfe5fd;
+  background-color: var(--ambition-icon-bg);
   border-radius: 50%;
   height: 1.6rem;
   width: 1.6rem;
@@ -85,14 +90,14 @@ body {
 }
 
 .ambition-community-content .icon i {
-  color: #3392fb;
+  color: var(--ambition-icon-color);
   font-size: 2rem;
   float: left;
   position: absolute;
 }
 
 .ambition-community-content {
-  background-color: #f4f7ff;
+  background-color: var(--ambition-community-color);
   display: flex;
   align-content: center;
   justify-content: space-around;
@@ -114,7 +119,8 @@ body {
   margin-top: 1rem;
 }
 
-/* career insights css */
+/* career insights section css */
+
 .career-insights {
   clear: both;
   width: 100%;
@@ -138,7 +144,7 @@ body {
   float: left;
   width: 20%;
   text-align: right;
-  color: #bbd3e3;
+  color: var(--view-all-color);
   position: relative;
   top: 0.3rem;
   font-size: 0.6rem;
@@ -155,9 +161,9 @@ body {
 }
 
 .career-insight-item {
-  border: 2px solid #f3f4f6;
+  border: 2px solid var(--image-border);
   border-radius: 10%;
-  box-shadow: 20px 20px 40px #f6f5fb;
+  box-shadow: 20px 20px 40px var(--card-blur);
   height: 30%;
   width: 30%;
 }
@@ -182,10 +188,10 @@ body {
 }
 
 .career-insight-item .career-insight-item-content .date {
-  color: #d7d8da;
+  color: var(--date-color);
 }
 
-/* know insights */
+/* company review section css */
 
 .company-review-container {
   clear:both;
@@ -218,13 +224,13 @@ body {
 
 .company-review-content img {
   border-radius: 10%;
-  border: 1px solid #f3f4f6;
+  border: 1px solid var(--image-border);
 }
 .company-review-content .content-action div{
   margin-top: 0.5rem;
   margin-left: 0.5rem;
   font-size: 0.6rem;
-  color: #adbed8;
+  color: var(--company-review-sub-text);
 }
 .company-review .heading {
   padding-bottom: 1rem;
@@ -236,7 +242,7 @@ body {
 .company-review button {
   color: white;
   border-radius: 9999rem;
-  background-color: #2e8cfb;
+  background-color: var(--button-bg);
   padding: 0.5rem 0.5rem;
   font-size: 0.6rem;
 }
@@ -265,6 +271,13 @@ body {
   }
   .view-all {
     width: 30%;
+  }
+  .company-review-content .company-review-text {
+    width: 100%;
+    height: 100%;
+  }
+  .company-review-content {
+    align-items: stretch;
   }
 }
 @media screen and ( max-width: 400px) {
